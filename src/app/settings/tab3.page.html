@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar><!-- Titulo Cabeçalho  -->
+    <ion-title>
+       Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+   <ion-header class="header-modal"><!-- Titulo Modal  -->
+    <ion-toolbar>
+      <ion-title>Dados Pessoais</ion-title>
+   </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding"> <!-- Modal  -->
+    <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Atualizar Dados</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <div>
+          <form action="">
+            <ion-list class="form-list-modal">
+
+              <ion-label>ID: </ion-label>
+              <ion-input
+                [(ngModel)]="id"
+                name="id"
+                type="number"
+                placeholder=""
+              ></ion-input>
+
+              <ion-label>Name: </ion-label>
+              <ion-input
+                [(ngModel)]="name "
+                name="name"
+                placeholder="Digite seu nome"
+                type="text"
+              ></ion-input>
+          
+                <ion-label>Email: </ion-label>
+                <ion-input
+                  [(ngModel)]="email"
+                  name="email"
+                  type="email"
+                  placeholder="Digite seu email"
+                ></ion-input>
+            
+                <ion-label>Senha: </ion-label>
+                <ion-input
+                  [(ngModel)]="password"
+                  name="password"
+                  type="password"
+                  placeholder="Digite uma senha"
+                >
+                  <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+                </ion-input>
+   
+            </ion-list>
+            <ion-button type="submit" (click)="updateData()" >Comfirmar</ion-button>
+          </form>
+         
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+</ion-content>
