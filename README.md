@@ -11,7 +11,7 @@
 ### Após instalar o Node.js, instale a Interface de Linha de Comando (CLI) do Ionic globalmente usando o npm:
 
 - **comando inicializar:**  npm install -g @ionic/cli
-- **criar projeto:** ionic start nome-do-projeto blank 
+- **criar projeto:** ionic start nome-do-projeto tabs 
 --type=angular
 
 ## Navegue até o diretório do projeto:
